@@ -1,4 +1,4 @@
-import { MaskLines, Reveal, SectionLabel } from './motion'
+import { Reveal, SectionLabel } from './motion'
 
 /* ---------- copy ---------- */
 
@@ -41,18 +41,7 @@ export function Network() {
     <section id="network" className="relative border-t border-line py-[clamp(96px,12vw,180px)]">
       <div className="wrap">
         <SectionLabel index="01">The network</SectionLabel>
-        <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-end">
-          <h2 className="display text-[clamp(38px,4.8vw,76px)] lg:col-span-7">
-            <MaskLines lines={['A quantum network', 'that reaches where', 'fiber cannot.']} />
-          </h2>
-          <Reveal as="p" className="max-w-[32rem] text-[16px] leading-relaxed text-fog lg:col-span-5">
-            We believe we are building the first integrated photonic QKD system that works across both free space and
-            fiber. Our focus is the network, getting quantum-secure keys to every node that needs them, over whichever
-            link reaches it.
-          </Reveal>
-        </div>
-
-        <div className="mt-20 grid gap-16 lg:grid-cols-2 lg:gap-20">
+        <div className="mt-12 grid gap-16 lg:grid-cols-2 lg:gap-20">
           <Column eyebrow="Why integrated photonics" title="A quantum terminal you can carry." items={integrated} />
           <Column eyebrow="Why free space and fiber" title="Every link a network needs." items={hybrid} />
         </div>

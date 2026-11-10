@@ -33,7 +33,7 @@ export function Film() {
 
           {/* HUD over the footage */}
           <motion.div className="pointer-events-none absolute inset-0" style={{ opacity: hudOpacity }} aria-hidden>
-            <div className="absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2">
+            <div className="absolute left-1/2 top-[56%] hidden -translate-x-1/2 -translate-y-1/2 sm:block">
               <motion.div
                 className="h-28 w-28 rounded-full border border-bone/40 sm:h-40 sm:w-40"
                 animate={{ rotate: 360 }}
@@ -59,14 +59,16 @@ export function Film() {
 
         <motion.div className="absolute inset-x-0 bottom-0 pb-[clamp(40px,8vh,96px)]" style={{ opacity: copyOpacity, y: copyY }}>
           <div className="wrap grid gap-8 lg:grid-cols-12 lg:items-end">
-            <h2 className="display text-[clamp(40px,6vw,96px)] lg:col-span-8">
-              Light enters here.
+            <h2 className="display text-[clamp(34px,4vw,72px)] [text-wrap:balance] lg:col-span-7">
+              Quantum networks on chips,
               <br />
-              <span className="text-fog">Keys leave as fiber.</span>
+              <span className="text-fog">across free space and fiber.</span>
             </h2>
-            <p className="lg:col-span-4 max-w-[26rem] text-[16px] leading-relaxed text-bone/80">
-              A grating antenna on the chip takes light straight out of free space and into a single-mode waveguide, where
-              the rest of the receiver can correct and measure it.
+            <p className="lg:col-span-5 max-w-[30rem] text-[16px] leading-relaxed text-bone/85">
+              We believe we are building the first integrated photonic QKD system that works across both free space and
+              fiber. Putting the transmitter and receiver on chips is what makes the network practical, with small,
+              low-power units that can sit on an aircraft, a rooftop, or a rack and pass quantum-secure keys over whichever
+              link reaches the next node.
             </p>
           </div>
         </motion.div>
