@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { ease } from './motion'
 
 const links = [
+  { href: '#network', label: 'Network' },
   { href: '#stack', label: 'PULSE-Q' },
   { href: '#platform', label: 'Platform' },
   { href: '#applications', label: 'Applications' },

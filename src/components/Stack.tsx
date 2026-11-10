@@ -194,7 +194,7 @@ export function Stack() {
 
   const Intro = (
     <>
-      <SectionLabel index="01">The product</SectionLabel>
+      <SectionLabel index="02">The product</SectionLabel>
       <h2 className="mt-8 display text-[clamp(52px,6.2vw,104px)]">
         <MaskLines lines={['PULSE-Q']} />
       </h2>

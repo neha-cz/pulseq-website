@@ -6,6 +6,7 @@ import { Company, Contact, Footer, Security } from './components/Closing'
 import { Film } from './components/Film'
 import { Hero } from './components/Hero'
 import { Nav } from './components/Nav'
+import { Network } from './components/Network'
 import { Platform } from './components/Platform'
 import { Stack } from './components/Stack'
 import { Statement } from './components/Statement'
@@ -35,6 +36,7 @@ export default function App() {
       <main>
         <Hero />
         <Statement />
+        <Network />
         <Stack />
         <Film />
         <Platform />

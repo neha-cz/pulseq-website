@@ -66,7 +66,7 @@ export function Applications() {
   return (
     <section id="applications" className="relative border-t border-line py-[clamp(96px,12vw,180px)]">
       <div className="wrap">
-        <SectionLabel index="03">Applications</SectionLabel>
+        <SectionLabel index="04">Applications</SectionLabel>
         <h2 className="mt-10 display text-[clamp(38px,4.8vw,76px)] max-w-[16ch]">
           <MaskLines lines={['Built for links that', 'cannot be trusted.']} />
         </h2>

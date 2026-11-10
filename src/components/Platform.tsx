@@ -26,7 +26,7 @@ export function Platform() {
   return (
     <section id="platform" className="relative border-t border-line py-[clamp(96px,12vw,180px)]">
       <div className="wrap">
-        <SectionLabel index="02">Platform</SectionLabel>
+        <SectionLabel index="03">Platform</SectionLabel>
         <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-end">
           <h2 className="display text-[clamp(38px,4.8vw,76px)] lg:col-span-7">
             <MaskLines lines={['A deployment is a', 'configuration, not a', 'new product.']} />
