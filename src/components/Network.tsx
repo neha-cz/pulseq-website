@@ -3,10 +3,9 @@ import { MaskLines, Reveal, SectionLabel } from './motion'
 /* ---------- copy ---------- */
 
 const integrated = [
-  ['Modular', 'Transmitter and receiver units combine into any topology, and the same unit takes either a fiber port or a telescope head.'],
+  ['Modular', 'Because the system is built from modular components, the whole setup is easy to deploy: it is designed to fit in a backpack and to be assembled quickly in the field, without an optics bench or hand alignment.'],
   ['Scalable', 'The chips come from a wafer-scale process, so every unit behaves alike. Adding a node means adding a unit, not building another optical bench.'],
   ['Energy-efficient', 'Modulators and interferometers on a chip replace racks of bulk optics and their drivers, which lowers the power draw at airborne and edge sites.'],
-  ['Easy to deploy', 'The terminal is designed to fit in a backpack and to be set up in the field without an optics bench or hand alignment.'],
 ]
 
 const hybrid = [
