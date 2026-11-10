@@ -36,9 +36,9 @@ export default function App() {
       <main>
         <Hero />
         <Statement />
+        <Film />
         <Network />
         <Stack />
-        <Film />
         <Platform />
         <Applications />
         <Security />
