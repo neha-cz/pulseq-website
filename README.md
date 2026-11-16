@@ -7,7 +7,6 @@ Marketing site for Malus, a University of Chicago spin-out from the Zhong Lab, a
 - React 19, TypeScript, Vite
 - Tailwind CSS v4
 - Framer Motion for scroll and interaction animation
-- three.js for the live render of the pilot receiver chip
 - Lenis for smooth scrolling
 
 ## Run it
@@ -30,12 +29,12 @@ The build uses relative paths (`base: './'`), so `dist/` can be served from any 
 | Path | What it holds |
 |---|---|
 | `src/components/Hero.tsx` | Full-bleed hero video, headline, and CTAs |
+| `src/components/Film.tsx` | Scroll-expanding chip film with the quantum networking message |
+| `src/components/Network.tsx` | Why integrated photonics and why free space plus fiber |
 | `src/components/Stack.tsx` | PULSE-Q product section: pinned, exploded four-layer system view |
-| `src/components/Film.tsx` | Scroll-expanding macro film of the grating coupler |
-| `src/components/Platform.tsx` | Platform section with the live chip render and the three units |
-| `src/components/ChipCanvas.tsx`, `src/three/chipScene.ts` | Live three.js render of the receiver chip with tracking callouts |
+| `src/components/Platform.tsx` | Platform section with the three units |
 | `src/components/Applications.tsx` | Aerospace and data center panels with photo and HUD overlays |
-| `src/components/Closing.tsx` | Security model, company, contact, and footer |
+| `src/components/Closing.tsx` | Company, contact, and footer |
 | `src/components/Media.tsx` | Photo drift, looping video, and callout components |
 | `public/media/` | Generated stills (WebP) and video loops (MP4) |
 
