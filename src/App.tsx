@@ -2,7 +2,7 @@ import { MotionConfig } from 'framer-motion'
 import Lenis from 'lenis'
 import { useEffect } from 'react'
 import { Applications } from './components/Applications'
-import { Company, Contact, Footer, Security } from './components/Closing'
+import { Company, Contact, Footer } from './components/Closing'
 import { Film } from './components/Film'
 import { Hero } from './components/Hero'
 import { Nav } from './components/Nav'
@@ -41,7 +41,6 @@ export default function App() {
         <Stack />
         <Platform />
         <Applications />
-        <Security />
         <Company />
         <Contact />
       </main>

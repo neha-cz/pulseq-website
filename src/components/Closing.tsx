@@ -6,60 +6,12 @@ import { MaskLines, Reveal, SectionLabel } from './motion'
 
 const CONTACT = 'hello@malus.example'
 
-const security = [
-  ['The whole path is untrusted', 'Every link, fold, and relay is treated as reachable by an adversary. Security rests on what the endpoints measure, not on protecting the channel.'],
-  ['No key material in the middle', 'No intermediate component or party in the path ever holds key material, and relays add only loss and a fixed delay.'],
-  ['Hardware interlocks', 'A reverse-light watchdog trips the laser through an interlock that does not depend on firmware, and the Source drops to a safe optical state.'],
-  ['Defended against light injection', 'Counted isolators, an exit guard, and a bright-light watchdog at the Receiver address back-reflection probing and detector blinding.'],
-  ['Quantum randomness', 'Basis and intensity choices come from a quantum random number generator with defined health tests and failure handling.'],
-  ['No key on a failed check', 'If parameter estimation fails, the endpoints output no key. The classical channel is authenticated end to end.'],
-]
-
-export function Security() {
-  return (
-    <section id="security" className="relative border-t border-line py-[clamp(96px,12vw,180px)]">
-      <div className="wrap">
-        <SectionLabel index="05">Security model</SectionLabel>
-        <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
-          <h2 className="display text-[clamp(38px,4.8vw,76px)] lg:col-span-6">
-            <MaskLines lines={['Designed in from the', 'output plane outward.']} />
-          </h2>
-          <Reveal className="lg:col-span-6">
-            <Cinematic name="optics" alt="Receiver aperture with crossed red laser lines" className="aspect-[16/10] rounded-[24px] border border-line" drift="in">
-              <Callout x={51} y={50} label="Watchdog on every port" n="SEC" />
-            </Cinematic>
-          </Reveal>
-        </div>
-        <div className="mt-16 grid gap-px overflow-hidden rounded-[24px] border border-line bg-line md:grid-cols-2 lg:grid-cols-3">
-          {security.map(([t, b], i) => (
-            <Reveal key={t} delay={(i % 3) * 0.06} className="group relative bg-ink p-8 sm:p-10 transition-colors duration-500 hover:bg-ink-2">
-              <span className="font-mono text-[11px] text-laser">{String(i + 1).padStart(2, '0')}</span>
-              <h3 className="mt-10 text-[22px] font-medium tracking-[-0.02em]">{t}</h3>
-              <p className="mt-3 text-[14px] leading-relaxed text-fog">{b}</p>
-              <span className="absolute bottom-0 left-0 h-px w-0 bg-laser transition-all duration-700 group-hover:w-full" />
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
-
-const gates = [
-  ['01', 'Laser and modulators', 'Pulse train, intensity levels, extinction, and phase randomness'],
-  ['02', 'Source output chain', 'D, R, A, L states recorded, isolation and watchdog trip time'],
-  ['03', 'Four-detector receiver', 'Each analyzer output detected, time-tagged, and recorded'],
-  ['04', 'Short fiber link', 'Clock sync, compensation lock, and basis mapping verified'],
-  ['05', 'Free-space link on gimbals', 'Beacon polarimeter lock, steering mirror tracking, and QBER'],
-  ['06', 'Chip and SNSPD comparison', 'Efficiency, QBER, and control stability against the baseline'],
-]
-
 export function Company() {
   return (
     <section id="company" className="relative overflow-hidden border-t border-line py-[clamp(96px,12vw,180px)]">
       <div className="pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] rounded-full bg-laser/10 blur-[140px]" />
       <div className="wrap relative">
-        <SectionLabel index="06">Company</SectionLabel>
+        <SectionLabel index="05">Company</SectionLabel>
         <div className="mt-10 grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <h2 className="display text-[clamp(38px,4.8vw,76px)]">
@@ -89,22 +41,6 @@ export function Company() {
             <div className="absolute bottom-0 left-0 p-5 font-mono text-[10px] uppercase tracking-[0.12em] text-bone/70">Bench characterization</div>
           </Cinematic>
         </Reveal>
-
-        <div className="mt-24">
-          <Reveal className="flex items-center justify-between border-b border-line pb-5">
-            <span className="label">Integration sequence</span>
-            <span className="label hidden sm:block">Step / what we prove</span>
-          </Reveal>
-          <ol>
-            {gates.map(([g, e, o], i) => (
-              <Reveal as="li" key={g} delay={i * 0.04} className="group grid grid-cols-12 items-baseline gap-4 border-b border-line py-6 transition-colors hover:bg-ink-2/60">
-                <span className="col-span-2 sm:col-span-1 font-mono text-[13px] text-laser">{g}</span>
-                <span className="col-span-10 sm:col-span-4 text-[19px] tracking-[-0.02em]">{e}</span>
-                <span className="col-span-12 sm:col-span-7 text-[14px] text-fog max-sm:pl-[calc(16.66%+4px)]">{o}</span>
-              </Reveal>
-            ))}
-          </ol>
-        </div>
       </div>
     </section>
   )
@@ -120,7 +56,7 @@ export function Contact() {
   return (
     <section id="contact" className="relative border-t border-line py-[clamp(96px,12vw,180px)] grain">
       <div className="wrap">
-        <SectionLabel index="07">Contact</SectionLabel>
+        <SectionLabel index="06">Contact</SectionLabel>
         <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
           <h2 className="display text-[clamp(48px,8vw,132px)] lg:col-span-8">
             <MaskLines lines={['Build the link', 'with us.']} />

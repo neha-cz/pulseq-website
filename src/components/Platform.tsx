@@ -1,4 +1,3 @@
-import { ChipCanvas } from './ChipCanvas'
 import { MaskLines, Reveal, SectionLabel } from './motion'
 
 const units = [
@@ -37,16 +36,7 @@ export function Platform() {
           </Reveal>
         </div>
 
-        <Reveal className="mt-16">
-          <div className="relative overflow-hidden rounded-[24px] border border-line">
-            <ChipCanvas layout="panel" className="aspect-[4/3] sm:aspect-[16/8]" />
-            <div className="pointer-events-none absolute right-0 top-0 p-5 font-mono text-[10px] uppercase tracking-[0.12em] text-bone/70">
-              Pilot receiver chip / live render
-            </div>
-          </div>
-        </Reveal>
-
-        <div className="mt-5 grid gap-px overflow-hidden rounded-[24px] border border-line bg-line lg:grid-cols-3">
+        <div className="mt-16 grid gap-px overflow-hidden rounded-[24px] border border-line bg-line lg:grid-cols-3">
           {units.map((u, i) => (
             <Reveal key={u.n} delay={i * 0.08} className="bg-ink p-7 sm:p-10">
               <div className="flex items-center justify-between">
