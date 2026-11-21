@@ -48,7 +48,7 @@ export function Cinematic({
           transition={{ duration: 22, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
         />
       </motion.div>
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_45%,transparent_55%,rgba(10,10,11,0.55)_100%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_45%,transparent_55%,rgba(0,0,0,0.55)_100%)]" />
       <div className="pointer-events-none absolute inset-0 grain" />
       {children}
     </div>
@@ -107,9 +107,9 @@ export function Callout({
         animate={inView ? { scale: 1, opacity: 1 } : {}}
         transition={{ delay, duration: 0.6 }}
       />
-      <span className="absolute -left-[2px] -top-[2px] block h-[4px] w-[4px] rounded-full bg-laser" />
+      <span className="absolute -left-[2px] -top-[2px] block h-[4px] w-[4px] rounded-full bg-accent" />
       <motion.span
-        className="absolute -left-[7px] -top-[7px] block h-[14px] w-[14px] rounded-full border border-laser"
+        className="absolute -left-[7px] -top-[7px] block h-[14px] w-[14px] rounded-full border border-accent"
         animate={inView ? { scale: [1, 2.6], opacity: [0.8, 0] } : {}}
         transition={{ delay: delay + 0.6, duration: 2.2, repeat: Infinity, ease: 'easeOut' }}
       />
@@ -126,7 +126,7 @@ export function Callout({
           transition={{ delay: delay + 0.3, duration: 0.6 }}
         />
         <span className="-translate-y-[1px] whitespace-nowrap rounded-full border border-bone/15 bg-ink/70 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-bone backdrop-blur-md">
-          {n && <span className="mr-1.5 text-laser">{n}</span>}
+          {n && <span className="mr-1.5 text-accent">{n}</span>}
           {label}
         </span>
       </motion.div>
@@ -136,7 +136,7 @@ export function Callout({
 
 /** Corner brackets that frame a region of a photo and gently track. */
 export function TrackBox({ x, y, w, h, label }: { x: number; y: number; w: number; h: number; label: string }) {
-  const c = 'absolute h-3 w-3 border-laser'
+  const c = 'absolute h-3 w-3 border-accent'
   return (
     <motion.div
       className="pointer-events-none absolute"

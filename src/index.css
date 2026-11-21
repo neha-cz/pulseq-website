@@ -4,17 +4,20 @@
 @import "@fontsource/jetbrains-mono/500.css";
 
 @theme {
-  --color-ink: #0a0a0b;
-  --color-ink-2: #111113;
-  --color-ink-3: #18181b;
-  --color-line: #26262a;
-  --color-line-2: #3a3a40;
-  --color-bone: #f4f2ee;
-  --color-fog: #a9a7a2;
-  --color-ash: #6f6d69;
-  --color-laser: #ff3d1f;
-  --color-laser-2: #ff7a4d;
-  --color-gold: #c9a45c;
+  /* Compton Networks: black ground and violet, after the pitch deck */
+  --color-ink: #000000;
+  --color-ink-2: #0b0912;
+  --color-ink-3: #15111f;
+  --color-line: #231c34;
+  --color-line-2: #3a2e58;
+  --color-bone: #f4f1fb;
+  --color-fog: #aba5bd;
+  --color-ash: #726b86;
+  --color-accent: #8b3ff0;
+  --color-accent-2: #b9a3e8;
+  --color-indigo: #351c77;
+  --color-lilac: #d9d2f0;
+  --color-sky: #a9c4f5;
 
   --font-sans: "Inter Tight Variable", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -37,8 +40,8 @@
     background: var(--color-ink);
     overflow-x: hidden;
   }
-  ::selection { background: var(--color-laser); color: var(--color-ink); }
-  :focus-visible { outline: 2px solid var(--color-laser); outline-offset: 3px; }
+  ::selection { background: var(--color-accent); color: var(--color-ink); }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
   a, button { cursor: pointer; }
 }
 
@@ -84,7 +87,7 @@
   }
   .btn:active { transform: scale(0.97); }
   .btn-primary { background: var(--color-bone); color: var(--color-ink); }
-  .btn-primary:hover { background: var(--color-laser); color: var(--color-ink); }
+  .btn-primary:hover { background: var(--color-accent); color: var(--color-ink); }
   .btn-ghost { border: 1px solid var(--color-line-2); color: var(--color-bone); }
   .btn-ghost:hover { border-color: var(--color-bone); }
   .link-draw {

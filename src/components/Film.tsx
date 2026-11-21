@@ -28,7 +28,7 @@ export function Film() {
               className="h-full w-full object-cover"
             />
           </motion.div>
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,#0a0a0b_0%,rgba(10,10,11,0.2)_45%,rgba(10,10,11,0.35)_100%)]" />
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0.2)_45%,rgba(0,0,0,0.35)_100%)]" />
           <div className="pointer-events-none absolute inset-0 grain" />
 
           {/* HUD over the footage */}
@@ -41,7 +41,7 @@ export function Film() {
                 style={{ borderStyle: 'dashed' }}
               />
               <motion.div
-                className="absolute inset-0 rounded-full border border-laser"
+                className="absolute inset-0 rounded-full border border-accent"
                 animate={{ scale: [0.6, 1.25], opacity: [0.9, 0] }}
                 transition={{ duration: 2.4, repeat: Infinity, ease: 'easeOut' }}
               />
@@ -65,10 +65,10 @@ export function Film() {
               <span className="text-fog">across free space and fiber.</span>
             </h2>
             <p className="lg:col-span-5 max-w-[30rem] text-[16px] leading-relaxed text-bone/85">
-              We believe we are building the first integrated photonic QKD system that works across both free space and
-              fiber. Putting the transmitter and receiver on chips is what makes the network practical, with small,
-              low-power units that can sit on an aircraft, a rooftop, or a rack and pass quantum-secure keys over whichever
-              link reaches the next node.
+              We believe we are building the first QKD system designed for both integrated photonics and hybrid free-space
+              and fiber networks. Designing the transmitter and receiver for chips is what makes the network practical, with
+              small, low-power terminals that can sit on an aircraft, a rooftop, or a rack and pass quantum-secure keys over
+              whichever link reaches the next node.
             </p>
           </div>
         </motion.div>

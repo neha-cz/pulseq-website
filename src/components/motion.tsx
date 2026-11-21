@@ -64,7 +64,7 @@ export function MaskLines({ lines, className, delay = 0 }: { lines: string[]; cl
 export function SectionLabel({ index, children }: { index: string; children: ReactNode }) {
   return (
     <Reveal className="flex items-center gap-4 label">
-      <span className="text-laser">{index}</span>
+      <span className="text-accent">{index}</span>
       <span className="h-px w-10 bg-line-2" />
       <span>{children}</span>
     </Reveal>

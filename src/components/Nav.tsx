@@ -4,7 +4,7 @@ import { ease } from './motion'
 
 const links = [
   { href: '#network', label: 'Network' },
-  { href: '#stack', label: 'PULSE-Q' },
+  { href: '#pulseq', label: 'PULSE-Q' },
   { href: '#platform', label: 'Platform' },
   { href: '#applications', label: 'Applications' },
   { href: '#company', label: 'Company' },
@@ -13,12 +13,14 @@ const links = [
 export function Logo({ className = '' }: { className?: string }) {
   return (
     <span className={`inline-flex items-center gap-2.5 ${className}`}>
-      <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden>
-        <path d="M5 24 L16 8 L27 24" fill="none" stroke="currentColor" strokeWidth="2.2" />
-        <path d="M10.5 24 L16 16 L21.5 24" fill="none" stroke="currentColor" strokeWidth="2.2" opacity="0.45" />
-        <circle cx="16" cy="8" r="2.8" fill="#ff3d1f" />
+      <svg width="24" height="24" viewBox="0 0 32 32" aria-hidden>
+        {/* Compton scattering: an incoming wave scatters off a point into an outgoing ray */}
+        <path d="M2 19 q2.6 -6 5.2 0 t5.2 0 t5.2 0" fill="none" stroke="#b9a3e8" strokeWidth="2" />
+        <path d="M18 19 L28 9" stroke="currentColor" strokeWidth="2" />
+        <path d="M23 9 H28 V14" fill="none" stroke="currentColor" strokeWidth="2" />
+        <circle cx="18" cy="19" r="2.6" fill="#8b3ff0" />
       </svg>
-      <span className="font-medium tracking-[-0.02em] text-[17px]">Malus</span>
+      <span className="text-[17px] font-medium tracking-[-0.02em]">Compton Networks</span>
     </span>
   )
 }
@@ -45,7 +47,7 @@ export function Nav() {
         className={`transition-colors duration-500 ${solid || open ? 'bg-ink/80 backdrop-blur-xl border-b border-line' : 'border-b border-transparent'}`}
       >
         <nav className="wrap flex h-16 items-center justify-between" aria-label="Primary">
-          <a href="#top" aria-label="Malus home" className="text-bone">
+          <a href="#top" aria-label="Compton Networks home" className="text-bone">
             <Logo />
           </a>
           <ul className="hidden md:flex items-center gap-8 text-[13px] text-fog">

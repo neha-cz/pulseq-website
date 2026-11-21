@@ -8,8 +8,8 @@ import { Hero } from './components/Hero'
 import { Nav } from './components/Nav'
 import { Network } from './components/Network'
 import { Platform } from './components/Platform'
-import { Stack } from './components/Stack'
 import { Statement } from './components/Statement'
+import { TerminalPair } from './components/TerminalPair'
 
 export default function App() {
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <MotionConfig reducedMotion="user">
-      <a href="#stack" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-bone focus:px-4 focus:py-2 focus:text-ink">
+      <a href="#network" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-bone focus:px-4 focus:py-2 focus:text-ink">
         Skip to content
       </a>
       <Nav />
@@ -38,7 +38,7 @@ export default function App() {
         <Statement />
         <Film />
         <Network />
-        <Stack />
+        <TerminalPair />
         <Platform />
         <Applications />
         <Company />

@@ -3,15 +3,15 @@ import { MaskLines, Reveal, SectionLabel } from './motion'
 const units = [
   {
     n: 'A',
-    name: 'Source unit',
-    body: 'Prepares decoy-state polarization pulses and launches them through a patch panel to a fiber port or a free-space optical head with its own polarization compensation.',
-    parts: ['780 nm gain-switched DFB', 'Two Sagnac modulators', 'QRNG-driven FPGA', 'Transmitter chip (roadmap)'],
+    name: 'Modular terminals',
+    body: 'A source and a receiver, each with a fiber port and a free-space port. The receiver’s input head swaps between an FC/APC collimator and a telescope with a fine steering mirror.',
+    parts: ['FC/APC 780HP fiber port', 'Free-space optical head', 'Swappable receiver head', 'Si SPAD or SNSPD, same interface'],
   },
   {
     n: 'B',
-    name: 'Receiver unit',
-    body: 'Accepts light through a swappable head, either a fiber collimator or a telescope with a fine steering mirror, then compensates, analyzes, and time-tags it on four channels.',
-    parts: ['Swappable fiber or telescope head', 'Beacon polarimeter lock', 'Linear and circular analyzers', 'MZI-mesh receiver chip (pilot)'],
+    name: 'Optical extension nodes',
+    body: 'A receiver in relay mode and a source in relay-launch mode share one baseplate and pass the beam through fiber in the mount. A node adds only loss and a fixed delay, and it never detects light or holds key material.',
+    parts: ['Free space → fiber → free space', 'Space- or tower-based extension', 'Hardware interlocks in relay mode', 'In feasibility study'],
   },
   {
     n: 'C',
@@ -31,8 +31,8 @@ export function Platform() {
             <MaskLines lines={['A deployment is a', 'configuration, not a', 'new product.']} />
           </h2>
           <Reveal as="p" className="text-[16px] leading-relaxed text-fog lg:col-span-5 max-w-[30rem]">
-            The same two units serve a bench link, a long free-space link, and a mixed path. Customers choose the
-            configuration they need, and as the photonic chips mature they drop into the same units.
+            The same terminal pair serves a tabletop link, a rooftop free-space link, a fiber link, and paths that mix the
+            two. Customers choose the configuration they need, and the hardware stays the same.
           </Reveal>
         </div>
 
@@ -48,7 +48,7 @@ export function Platform() {
               <ul className="mt-8 space-y-0">
                 {u.parts.map((p) => (
                   <li key={p} className="flex items-center gap-3 border-t border-line py-3 text-[13px] text-bone/85">
-                    <span className="h-1 w-1 rounded-full bg-laser" />
+                    <span className="h-1 w-1 rounded-full bg-accent" />
                     {p}
                   </li>
                 ))}

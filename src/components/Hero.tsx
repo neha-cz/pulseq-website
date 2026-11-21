@@ -37,16 +37,16 @@ export function Hero() {
         )}
         {/* grade the footage down so it sits in the dark page */}
         <div className="pointer-events-none absolute inset-0 grain" />
-        <div className="pointer-events-none absolute inset-0 bg-[#0a0a0b]/45 mix-blend-multiply" />
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_65%_40%,transparent_30%,rgba(10,10,11,0.7)_100%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[#000000]/45 mix-blend-multiply" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(80%_70%_at_65%_40%,transparent_30%,rgba(0,0,0,0.7)_100%)]" />
         <div className="pointer-events-none absolute right-0 top-16 hidden p-6 font-mono text-[10px] uppercase tracking-[0.12em] text-bone/70 lg:block">
-          <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-laser align-middle" />
+          <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-accent align-middle" />
           Free-space node / dusk
         </div>
       </motion.div>
 
       {/* readability gradients */}
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(10,10,11,0.88)_0%,rgba(10,10,11,0.55)_32%,rgba(10,10,11,0)_60%)] max-lg:bg-[linear-gradient(0deg,#0a0a0b_10%,rgba(10,10,11,0.65)_50%,rgba(10,10,11,0.1)_80%)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.88)_0%,rgba(0,0,0,0.55)_32%,rgba(0,0,0,0)_60%)] max-lg:bg-[linear-gradient(0deg,#000000_10%,rgba(0,0,0,0.65)_50%,rgba(0,0,0,0.1)_80%)]" />
       <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-ink/70 to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent" />
 
@@ -59,8 +59,8 @@ export function Hero() {
             transition={{ duration: 0.8, ease, delay: 0.2 }}
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-laser opacity-60" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-laser" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-60" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-accent" />
             </span>
             Introducing PULSE-Q <span className="text-ash">/</span> A University of Chicago spin-out
           </motion.p>
@@ -86,7 +86,7 @@ export function Hero() {
               Request a briefing
               <Arrow />
             </a>
-            <a href="#stack" className="btn btn-ghost">
+            <a href="#pulseq" className="btn btn-ghost">
               Meet PULSE-Q
             </a>
           </motion.div>
@@ -102,8 +102,8 @@ export function Hero() {
         <div className="wrap grid h-14 grid-cols-2 items-center gap-4 md:grid-cols-4 font-mono text-[11px] uppercase tracking-[0.12em] text-ash">
           <span><span className="text-bone">780 nm</span> signal band</span>
           <span><span className="text-bone">100 MHz</span> pulse rate</span>
-          <span className="hidden md:block"><span className="text-bone">Tx + Rx</span> photonic chips</span>
-          <span className="hidden md:block"><span className="text-bone">Pilot</span> MZI-mesh receiver</span>
+          <span className="hidden md:block"><span className="text-bone">Source + receiver</span> terminal pair</span>
+          <span className="hidden md:block"><span className="text-bone">Free space + fiber</span> links</span>
         </div>
       </motion.div>
     </section>

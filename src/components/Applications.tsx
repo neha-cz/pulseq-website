@@ -8,7 +8,7 @@ function AeroScene() {
       <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 h-full w-full" aria-hidden>
         <motion.line
           x1="36" y1="12" x2="80" y2="58"
-          stroke="#ff3d1f" strokeWidth="1.2" vectorEffect="non-scaling-stroke" strokeDasharray="4 8"
+          stroke="#8b3ff0" strokeWidth="1.2" vectorEffect="non-scaling-stroke" strokeDasharray="4 8"
           animate={{ strokeDashoffset: [0, -24] }}
           transition={{ duration: 0.9, repeat: Infinity, ease: 'linear' }}
         />
@@ -27,7 +27,7 @@ function DCScene() {
   return (
     <Cinematic name="datahall" alt="Aisle of GPU server racks in a data center, crossed by red free-space optical links" className="absolute inset-0" drift="in">
       <motion.div
-        className="pointer-events-none absolute inset-x-0 h-px bg-gradient-to-r from-transparent via-laser to-transparent"
+        className="pointer-events-none absolute inset-x-0 h-px bg-gradient-to-r from-transparent via-accent to-transparent"
         animate={{ top: ['10%', '90%'] }}
         transition={{ duration: 5, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
         aria-hidden
@@ -48,7 +48,7 @@ const apps = [
     id: 'aero',
     tag: 'Aerospace and defense',
     title: ['Keys over line of sight,', 'handed into fiber.'],
-    body: 'Airborne and space platforms need keys that can be exchanged across optical links in motion and delivered into fiber at the ground. Our terminals mount on two-axis gimbals, track a classical beacon, and move between free space and fiber on the chip.',
+    body: 'Airborne and space platforms need keys that can be exchanged across optical links in motion and delivered into fiber at the ground. Our terminals mount on two-axis gimbals, track a classical beacon, and carry the same key over free space and fiber.',
     uses: 'Such as air-to-ground links, ship-to-shore links, forward operating bases, and satellite ground stations.',
     Scene: AeroScene,
   },
@@ -56,7 +56,7 @@ const apps = [
     id: 'dc',
     tag: 'AI data centers',
     title: ['Quantum-secure links', 'between GPU clusters.'],
-    body: 'Model weights and training data move between GPU clusters across halls and campuses. We are building optical interconnects that refresh encryption keys for those links, using free-space hops where fiber is hard to route and fiber where it already runs.',
+    body: 'Model weights and training data move between GPU clusters across halls and campuses. We are building high-assurance security for these optical interconnects, using free-space hops where fiber is hard to route and the fiber that already runs between sites.',
     uses: 'Such as hall-to-hall links, campus interconnects, and links between sovereign compute sites.',
     Scene: DCScene,
   },
@@ -80,7 +80,7 @@ export function Applications() {
                   </div>
                 </div>
                 <div className="p-7 sm:p-10">
-                  <p className="label text-laser">{tag}</p>
+                  <p className="label text-accent">{tag}</p>
                   <h3 className="mt-5 text-[clamp(28px,2.6vw,40px)] font-medium leading-[1.05] tracking-[-0.035em]">
                     {title[0]}
                     <br />

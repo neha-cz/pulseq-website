@@ -4,12 +4,12 @@ import { Logo } from './Nav'
 import { Callout, Cinematic } from './Media'
 import { MaskLines, Reveal, SectionLabel } from './motion'
 
-const CONTACT = 'hello@malus.example'
+const CONTACT = 'hello@comptonnetworks.example'
 
 export function Company() {
   return (
     <section id="company" className="relative overflow-hidden border-t border-line py-[clamp(96px,12vw,180px)]">
-      <div className="pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] rounded-full bg-laser/10 blur-[140px]" />
+      <div className="pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] rounded-full bg-accent/10 blur-[140px]" />
       <div className="wrap relative">
         <SectionLabel index="05">Company</SectionLabel>
         <div className="mt-10 grid gap-16 lg:grid-cols-12">
@@ -20,23 +20,25 @@ export function Company() {
           </div>
           <div className="lg:col-span-5 space-y-5 text-[16px] leading-relaxed text-fog lg:pt-4">
             <Reveal as="p">
-              Malus began in Professor Tian Zhong&apos;s lab at the University of Chicago Pritzker School of Molecular
-              Engineering, where the group works on quantum photonics and quantum networking.
+              Compton Networks is a team of eight undergraduate researchers and engineers, spun out of Professor Tian
+              Zhong&apos;s lab and the undergraduate space program at the University of Chicago.
             </Reveal>
             <Reveal as="p" delay={0.06}>
-              We believe quantum-secure links will only matter at scale if the whole system, from the photonics to the
-              key processing, is integrated, affordable, and stable outside the lab. We are starting with the receiver
-              chip as our pilot, and building toward the full stack one verified step at a time.
+              We believe quantum security needs to become as deployable as the optical networks themselves. Our first goal
+              is an end-to-end key exchange between modular PULSE-Q source and receiver terminals, starting with a tabletop
+              demonstration and moving to rooftop and drone-carried links.
             </Reveal>
             <Reveal as="p" delay={0.12}>
-              Our classical channel builds on terminal heritage from the PULSE-A mission, so the quantum and classical
-              halves of the system grow from work that has already been done.
+              PULSE-Q builds on PULSE-A, a free-space optical satellite mission from the UChicago Space Program that has
+              completed risk-reduction testing and is set to launch in 2027. We have passed a mission concept review for
+              satellite-based QKD, presented a space-to-ground QKD baseline at SmallSat 2026, and collaborate with
+              NASA&apos;s JPL on the Deep Space Quantum Link.
             </Reveal>
           </div>
         </div>
 
         <Reveal className="mt-20">
-          <Cinematic name="lab" alt="Quantum optics bench at night with a photonic chip on a probe stage and a red laser" className="aspect-[4/3] rounded-[24px] border border-line sm:aspect-[21/9]" drift="left">
+          <Cinematic name="lab" alt="Quantum optics bench at night with a photonic chip on a probe stage and a violet laser" className="aspect-[4/3] rounded-[24px] border border-line sm:aspect-[21/9]" drift="left">
             <Callout x={73} y={64} label="Chip on probe stage" side="left" n="LAB" />
             <div className="absolute bottom-0 left-0 p-5 font-mono text-[10px] uppercase tracking-[0.12em] text-bone/70">Bench characterization</div>
           </Cinematic>
@@ -100,13 +102,14 @@ export function Footer() {
           <div className="md:col-span-5">
             <Logo />
             <p className="mt-5 max-w-[22rem] text-[14px] leading-relaxed text-ash">
-              Makers of PULSE-Q, a fully integrated photonic quantum key distribution system, from chips to keys.
+              Building the next generation of quantum-secure optical infrastructure. Makers of PULSE-Q.
             </p>
           </div>
           <nav aria-label="Footer" className="md:col-span-7 grid grid-cols-2 gap-8 sm:grid-cols-3 text-[14px]">
             <ul className="space-y-3">
               <li className="label mb-4">Product</li>
-              <li><a className="link-draw text-fog hover:text-bone" href="#stack">The system</a></li>
+              <li><a className="link-draw text-fog hover:text-bone" href="#network">Network</a></li>
+              <li><a className="link-draw text-fog hover:text-bone" href="#pulseq">PULSE-Q</a></li>
                             <li><a className="link-draw text-fog hover:text-bone" href="#platform">Platform</a></li>
             </ul>
             <ul className="space-y-3">
@@ -123,14 +126,14 @@ export function Footer() {
           </nav>
         </div>
         <div className="mt-16 flex flex-col gap-3 border-t border-line pt-6 font-mono text-[11px] uppercase tracking-[0.1em] text-ash sm:flex-row sm:justify-between">
-          <span>© 2026 Malus</span>
+          <span>© 2026 Compton Networks</span>
           <span>Chicago, Illinois</span>
         </div>
       </div>
       <div className="overflow-hidden">
         <div className="wrap">
           <p aria-hidden className="display select-none text-[clamp(80px,22vw,340px)] leading-[0.78] tracking-[-0.06em] text-ink-3 translate-y-[12%]">
-            Malus
+            Compton
           </p>
         </div>
       </div>
