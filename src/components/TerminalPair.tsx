@@ -645,12 +645,6 @@ const targets = [
   ['30–50 km', 'Long-term ground-to-ground'],
 ]
 
-const roadmap = [
-  ['T1', '2026 to 2027', 'PULSE-Q terminal prototype', 'A free-space and fiber compatible terminal pair, source and receiver, for QKD demonstrations.'],
-  ['T2', '2028 to 2029', 'Integrated photonics-based QKD', 'An integrated photonics chip design that replaces bulky adaptive optics inside the QKD terminals.'],
-  ['T3', '2029 onward', 'Large-scale network deployments', 'QKD and classical communication links over 50 km and at higher data rates for commercial networks.'],
-]
-
 function TerminalHead({ tag, title, body }: { tag: string; title: string; body: string }) {
   return (
     <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
@@ -722,25 +716,6 @@ export function TerminalPair() {
           <Reveal className="mt-10 rounded-[24px] border border-line bg-ink-2/80 p-5 sm:p-8">
             <ReceiverDiagram />
           </Reveal>
-        </div>
-
-        <div className="mt-28">
-          <Reveal className="flex items-center justify-between border-b border-line pb-5">
-            <span className="label">Product roadmap</span>
-            <span className="label hidden sm:block">Stage / timing / what we offer</span>
-          </Reveal>
-          <ol className="grid gap-px overflow-hidden rounded-b-[24px] bg-line lg:grid-cols-3">
-            {roadmap.map(([t, when, name, body], i) => (
-              <Reveal as="li" key={t} delay={i * 0.06} className="bg-ink p-7 sm:p-9">
-                <div className="flex items-center justify-between">
-                  <span className={`flex h-9 w-9 items-center justify-center rounded-full font-mono text-[12px] ${i === 0 ? 'bg-accent text-bone' : 'border border-line-2 text-fog'}`}>{t}</span>
-                  <span className="font-mono text-[11px] uppercase tracking-[0.12em] text-ash">{when}</span>
-                </div>
-                <h4 className="mt-8 text-[22px] font-medium tracking-[-0.02em]">{name}</h4>
-                <p className="mt-3 text-[14px] leading-relaxed text-fog">{body}</p>
-              </Reveal>
-            ))}
-          </ol>
         </div>
       </div>
     </section>

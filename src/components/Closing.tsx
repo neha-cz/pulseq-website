@@ -1,10 +1,8 @@
-import { motion } from 'framer-motion'
-import { Arrow } from './Hero'
 import { Logo } from './Nav'
 import { Callout, Cinematic } from './Media'
 import { MaskLines, Reveal, SectionLabel } from './motion'
 
-const CONTACT = 'hello@comptonnetworks.example'
+import { CONTACT } from '../site'
 
 export function Company() {
   return (
@@ -43,52 +41,6 @@ export function Company() {
             <div className="absolute bottom-0 left-0 p-5 font-mono text-[10px] uppercase tracking-[0.12em] text-bone/70">Bench characterization</div>
           </Cinematic>
         </Reveal>
-      </div>
-    </section>
-  )
-}
-
-const asks = [
-  ['Pilot programs', 'For aerospace, defense, and data center teams who want to evaluate a configuration on their own link.', 'Pilot inquiry'],
-  ['Investors', 'For partners who want to discuss our technical plan, our milestones, and where the product goes next.', 'Investor inquiry'],
-  ['Careers', 'For photonics, optics, FPGA, and systems engineers who want to build quantum hardware that ships.', 'Careers'],
-]
-
-export function Contact() {
-  return (
-    <section id="contact" className="relative border-t border-line py-[clamp(96px,12vw,180px)] grain">
-      <div className="wrap">
-        <SectionLabel index="05">Contact</SectionLabel>
-        <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
-          <h2 className="display text-[clamp(48px,8vw,132px)] lg:col-span-8">
-            <MaskLines lines={['Build the link', 'with us.']} />
-          </h2>
-          <Reveal as="p" className="lg:col-span-4 text-[16px] leading-relaxed text-fog max-w-[26rem]">
-            We are working with early partners on pilot configurations, and we would welcome a conversation about the
-            links you need to protect.
-          </Reveal>
-        </div>
-        <div className="mt-16 grid gap-4 md:grid-cols-3">
-          {asks.map(([t, b, subj], i) => (
-            <Reveal key={t} delay={i * 0.06}>
-              <a
-                href={`mailto:${CONTACT}?subject=${encodeURIComponent(subj)}`}
-                className="group flex h-full flex-col justify-between rounded-[20px] border border-line bg-ink-2 p-7 transition-all duration-500 hover:-translate-y-0.5 hover:border-line-2"
-              >
-                <div>
-                  <h3 className="text-[24px] font-medium tracking-[-0.02em]">{t}</h3>
-                  <p className="mt-3 text-[14px] leading-relaxed text-fog">{b}</p>
-                </div>
-                <span className="mt-10 inline-flex items-center gap-3 text-[14px] text-bone">
-                  <span className="link-draw">Get in touch</span>
-                  <motion.span className="inline-flex transition-transform duration-300 group-hover:translate-x-1">
-                    <Arrow />
-                  </motion.span>
-                </span>
-              </a>
-            </Reveal>
-          ))}
-        </div>
       </div>
     </section>
   )

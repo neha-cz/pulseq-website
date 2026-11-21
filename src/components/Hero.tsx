@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
 import { Cinematic, LoopVideo } from './Media'
+import { BRIEFING } from '../site'
 import { MaskLines, ease } from './motion'
 
 /** Set to the hero clip once it is generated; until then the still runs with a slow camera drift. */
@@ -82,7 +83,7 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease, delay: 0.9 }}
           >
-            <a href="#contact" className="btn btn-primary">
+            <a href={BRIEFING} className="btn btn-primary">
               Request a briefing
               <Arrow />
             </a>

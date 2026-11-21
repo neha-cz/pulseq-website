@@ -31,9 +31,9 @@ The build uses relative paths (`base: './'`), so `dist/` can be served from any 
 | `src/components/Hero.tsx` | Full-bleed hero video, headline, and CTAs |
 | `src/components/Film.tsx` | Scroll-expanding chip film with the quantum networking message |
 | `src/components/Network.tsx` | Why integrated photonics and why free space plus fiber |
-| `src/components/TerminalPair.tsx` | PULSE-Q section: MVP targets, animated Source and Receiver signal chains with block details, roadmap |
+| `src/components/TerminalPair.tsx` | PULSE-Q section: MVP targets, animated Source and Receiver signal chains with block details |
 | `src/components/Applications.tsx` | Aerospace and data center panels with photo and HUD overlays |
-| `src/components/Closing.tsx` | Company, contact, and footer |
+| `src/components/Closing.tsx` | Company and footer |
 | `src/components/Media.tsx` | Photo drift, looping video, and callout components |
 | `public/media/` | Generated stills (WebP) and video loops (MP4) |
 
@@ -47,4 +47,4 @@ The photographs and video loops in `public/media/` are AI-generated concept imag
 
 ## Placeholders to replace before launch
 
-- Contact email `hello@comptonnetworks.example` in `src/components/Closing.tsx`
+- Contact email `hello@comptonnetworks.example` in `src/site.ts`

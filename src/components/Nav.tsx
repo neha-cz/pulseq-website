@@ -1,5 +1,6 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useState } from 'react'
+import { BRIEFING } from '../site'
 import { ease } from './motion'
 
 const links = [
@@ -59,7 +60,7 @@ export function Nav() {
             ))}
           </ul>
           <div className="flex items-center gap-3">
-            <a href="#contact" className="hidden sm:inline-flex btn btn-primary !h-9 !px-4 !text-[13px]">
+            <a href={BRIEFING} className="hidden sm:inline-flex btn btn-primary !h-9 !px-4 !text-[13px]">
               Request a briefing
             </a>
             <button
@@ -84,7 +85,7 @@ export function Nav() {
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.4, ease }}
             >
-              {[...links, { href: '#contact', label: 'Request a briefing' }].map((l) => (
+              {[...links, { href: BRIEFING, label: 'Request a briefing' }].map((l) => (
                 <li key={l.href} className="border-t border-line">
                   <a href={l.href} onClick={() => setOpen(false)} className="flex h-14 items-center text-2xl tracking-tight">
                     {l.label}
