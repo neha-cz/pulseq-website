@@ -2,7 +2,6 @@ import { Logo } from './Nav'
 import { Callout, Cinematic } from './Media'
 import { MaskLines, Reveal, SectionLabel } from './motion'
 
-import { CONTACT } from '../site'
 
 export function Company() {
   return (
@@ -71,8 +70,6 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="label mb-4">Company</li>
               <li><a className="link-draw text-fog hover:text-bone" href="#company">About</a></li>
-              <li><a className="link-draw text-fog hover:text-bone" href={`mailto:${CONTACT}?subject=Careers`}>Careers</a></li>
-              <li><a className="link-draw text-fog hover:text-bone" href={`mailto:${CONTACT}`}>Contact</a></li>
             </ul>
           </nav>
         </div>
