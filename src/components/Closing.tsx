@@ -11,7 +11,7 @@ export function Company() {
     <section id="company" className="relative overflow-hidden border-t border-line py-[clamp(96px,12vw,180px)]">
       <div className="pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] rounded-full bg-accent/10 blur-[140px]" />
       <div className="wrap relative">
-        <SectionLabel index="05">Company</SectionLabel>
+        <SectionLabel index="04">Company</SectionLabel>
         <div className="mt-10 grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <h2 className="display text-[clamp(38px,4.8vw,76px)]">
@@ -58,7 +58,7 @@ export function Contact() {
   return (
     <section id="contact" className="relative border-t border-line py-[clamp(96px,12vw,180px)] grain">
       <div className="wrap">
-        <SectionLabel index="06">Contact</SectionLabel>
+        <SectionLabel index="05">Contact</SectionLabel>
         <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
           <h2 className="display text-[clamp(48px,8vw,132px)] lg:col-span-8">
             <MaskLines lines={['Build the link', 'with us.']} />
@@ -110,7 +110,6 @@ export function Footer() {
               <li className="label mb-4">Product</li>
               <li><a className="link-draw text-fog hover:text-bone" href="#network">Network</a></li>
               <li><a className="link-draw text-fog hover:text-bone" href="#pulseq">PULSE-Q</a></li>
-                            <li><a className="link-draw text-fog hover:text-bone" href="#platform">Platform</a></li>
             </ul>
             <ul className="space-y-3">
               <li className="label mb-4">Markets</li>

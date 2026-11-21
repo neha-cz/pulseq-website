@@ -32,7 +32,6 @@ The build uses relative paths (`base: './'`), so `dist/` can be served from any 
 | `src/components/Film.tsx` | Scroll-expanding chip film with the quantum networking message |
 | `src/components/Network.tsx` | Why integrated photonics and why free space plus fiber |
 | `src/components/TerminalPair.tsx` | PULSE-Q section: MVP targets, animated Source and Receiver signal chains with block details, roadmap |
-| `src/components/Platform.tsx` | Platform section with the three units |
 | `src/components/Applications.tsx` | Aerospace and data center panels with photo and HUD overlays |
 | `src/components/Closing.tsx` | Company, contact, and footer |
 | `src/components/Media.tsx` | Photo drift, looping video, and callout components |

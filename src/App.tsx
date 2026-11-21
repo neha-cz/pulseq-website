@@ -7,7 +7,6 @@ import { Film } from './components/Film'
 import { Hero } from './components/Hero'
 import { Nav } from './components/Nav'
 import { Network } from './components/Network'
-import { Platform } from './components/Platform'
 import { Statement } from './components/Statement'
 import { TerminalPair } from './components/TerminalPair'
 
@@ -39,7 +38,6 @@ export default function App() {
         <Film />
         <Network />
         <TerminalPair />
-        <Platform />
         <Applications />
         <Company />
         <Contact />

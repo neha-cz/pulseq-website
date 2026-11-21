@@ -5,7 +5,6 @@ import { ease } from './motion'
 const links = [
   { href: '#network', label: 'Network' },
   { href: '#pulseq', label: 'PULSE-Q' },
-  { href: '#platform', label: 'Platform' },
   { href: '#applications', label: 'Applications' },
   { href: '#company', label: 'Company' },
 ]
