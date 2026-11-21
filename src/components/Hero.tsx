@@ -64,8 +64,8 @@ export function Hero() {
             </span>
             Introducing PULSE-Q <span className="text-ash">/</span> A University of Chicago spin-out
           </motion.p>
-          <h1 className="display text-[clamp(44px,7vw,112px)]">
-            <MaskLines lines={['The quantum link,', 'built on chips.']} delay={0.3} />
+          <h1 className="display max-w-[16ch] text-[clamp(36px,4.6vw,78px)] sm:max-w-none">
+            <MaskLines lines={['Building the next generation', 'of quantum-secure optical', 'infrastructure.']} delay={0.3} />
           </h1>
           <motion.p
             className="mt-8 max-w-[34rem] text-[17px] leading-relaxed text-bone/80"
